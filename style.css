@@ -1,0 +1,127 @@
+/* Variables */
+:root {
+  /* Colors */
+  --Softblue: hsla(215, 52%, 70%, 0.5);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --mainBG: hsl(217, 54%, 11%);
+  --cardBG: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+/* Main Styles/config/resets For All */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--mainBG);
+  font-size: 18px;
+}
+img {
+  max-width: 100%;
+}
+ul {
+  list-style-type: none;
+}
+/* utilities */
+  .container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* main design */
+  .card {
+    padding: 1rem;
+    width: 20%;
+    background-color: var(--cardBG);
+    border: 1px solid;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 100px var(--cardBG);
+  }
+  .card .main-img {
+    position: relative;
+  }
+  .card .main-img > img {
+    border: 1px solid;
+    border-radius: 0.5rem;
+  }
+  .card .main-img .prev-icon {
+    display: flex;
+    justify-content: center;
+    background-color: var(--Cyan);
+    opacity: 0.6;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 99%;
+    visibility: hidden;
+    border: 1px solid;
+    border-radius: 0.5rem;
+  }
+  .card .main-img:hover .prev-icon {
+    visibility: visible;
+  }
+  .card h2 {
+    color: var(--White);
+    font-weight: 600;
+  }
+  .card h2:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+  }
+  .card p {
+    padding-top: 1rem;
+    color: var(--Softblue);
+    font-weight: 400;
+  }
+  .card ul {
+    padding-top: 1.5rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    color: var(--Softblue);
+  }
+  .card ul li {
+    font-weight: 300;
+  }
+  .card ul :first-child {
+    color: var(--Cyan);
+  }
+  .card .avatar {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .card .avatar span {
+    color: var(--White);
+  }
+  .card .avatar span:hover {
+    cursor: pointer;
+    color: var(--Cyan);
+  }
+  .card .avatar img {
+    max-width: 4rem;
+    border: 1px white solid;
+    border-radius: 50%;
+  }
+  .card .avatar p {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+@media only screen and (max-width: 1200px) and (min-width: 375px){
+    .container{
+        padding: 0px;
+    }
+    .card{
+        width: 375px;
+    }
+}

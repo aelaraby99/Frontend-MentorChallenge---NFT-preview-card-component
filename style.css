@@ -18,7 +18,7 @@
 body {
   font-family: "Outfit", sans-serif;
   background-color: var(--mainBG);
-  font-size: 18px;
+  font-size: 18px; 
 }
 img {
   max-width: 100%;
@@ -33,11 +33,12 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
   /* main design */
   .card {
     padding: 1rem;
-    width: 20%;
+    width: 25%;
     background-color: var(--cardBG);
     border: 1px solid;
     border-radius: 0.5rem;
@@ -109,7 +110,7 @@ ul {
     color: var(--Cyan);
   }
   .card .avatar img {
-    max-width: 4rem;
+    max-width: 3rem;
     border: 1px white solid;
     border-radius: 50%;
   }
